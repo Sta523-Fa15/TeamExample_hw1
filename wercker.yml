@@ -23,5 +23,4 @@ build:
     - script:
         name: Run Tests
         code: |
-          Rscript -e "library(testthat);cat("\n\n\n\n");test_dir('tests');test_dir('tests',reporter='stop')"
-          
+          Rscript -e "library(testthat);cat('\\n\\n\\n\\n');test_dir('tests');test_dir('tests',reporter='stop')"
