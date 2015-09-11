@@ -13,6 +13,7 @@ build:
     - script:
         name: Get Tests
         code: |
+          echo ""
           mkdir tests
           wget -nv https://raw.githubusercontent.com/Sta523-Fa15/Homework/master/hw1/tests/test_is_connected.R -O tests/test_is_connected.R
           wget -nv https://raw.githubusercontent.com/Sta523-Fa15/Homework/master/hw1/tests/test_is_isomorphic.R -O tests/test_is_isomorphic.R
@@ -23,4 +24,5 @@ build:
     - script:
         name: Run Tests
         code: |
-          Rscript -e "library(testthat);cat('\\n\\n\\n\\n');source('graph.R');test_dir('tests');test_dir('tests',reporter='stop')"
+          echo ""
+          Rscript -e "library(testthat);source('graph.R');test_dir('tests');test_dir('tests',reporter='stop')"
